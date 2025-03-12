@@ -1,0 +1,18 @@
+
+.contenedor_titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
