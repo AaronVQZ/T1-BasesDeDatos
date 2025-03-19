@@ -18,17 +18,28 @@
 
     <!-- Contenedor de la lista -->
     <div class="contenedor_lista">
-
-        <h2>Aqui va la lista</h2>
-        <!-- Colocar los elementos para la lista de empleados -->
-
+        <h2>Lista de Empleados</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Salario</th>
+            </tr>
+            {% for empleado in empleados %}
+            <tr>
+                <td>{{ empleado.0 }}</td>
+                <td>{{ empleado.1 }}</td>
+                <td>{{ empleado.2 }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 
     <!-- ************************************************************************************************************* -->
 
     <!-- Contendor de botones -->
     <div class="contenedor_botones">
-        <h2>Aqui van los botones</h2>
+        <button>Agregar Empleado</button>
     </div>
     
 </body>
