@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'Tarea 1',
         'USER': 'Adolfo',
         'PASSWORD': 'Ajbm162507',

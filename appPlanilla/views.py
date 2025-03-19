@@ -3,12 +3,18 @@ from django.db import connection
 
 # Create your views here.
 
-def obtener_empleados(request):
+def obtener_empleados():
     query = "EXEC sp_ObtenerEmpleados"
-    with connection.connecction as conn:
-        empleados = conn.execute(query).fetchall()
+    
+    connection.ensure_connection()
+
+    conn = connection.connection
+    empleados = conn.execute(query).fetchall()
     return empleados
 
 
 def home(request):
-    return render(request, "Pagina_principal.html")
+    
+    lista_empleados = obtener_empleados()
+    
+    return render(request, "Pagina_principal.html", {"empleados": lista_empleados})

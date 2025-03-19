@@ -1,18 +1,93 @@
 
-.contenedor_titulo{
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; 
+    color: #ffffff;          
+}
+
+
+#titulo {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #ffffff; 
+}
+
+
+.contenedor_titulo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.contenedor_lista{
+
+.contenedor_lista {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px; 
 }
 
-.contenedor_botones{
+
+.tabla {
+    width: 80%;
+    border-collapse: collapse;
+
+    background-color: #2e2e2e;
+}
+
+
+.tabla th {
+    background-color: #333333; 
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid #444444; 
+    color: #ffffff;
+}
+
+
+.tabla td {
+    border: 1px solid #444444;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.tabla tr{
+    font-size: 18px;
+}
+
+
+.tabla tr:nth-child(even) {
+    background-color: #252525;
+}
+
+
+.tabla tr:hover {
+    background-color: #3b3b3b;
+}
+
+
+.contenedor_botones {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
+}
+
+
+#boton_agregar {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#boton_agregar:hover {
+    background-color: #666666;
 }
