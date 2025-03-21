@@ -1,3 +1,10 @@
-mysite\setting.py
-mysite/__pycache__/
-venv
+# Ignorar el archivo de config
+mysite/settings.py
+
+# Ignorar caché de Python
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar entorno virtual de Python
+venv/
