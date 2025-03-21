@@ -2,6 +2,7 @@
 mysite/settings.py
 
 # Ignorar caché de Python
+appPlanilla/migrations/__pycache__/
 **/__pycache__/
 *.pyc
 *.pyo
