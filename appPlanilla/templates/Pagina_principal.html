@@ -49,12 +49,15 @@
         <div class="modal-contenido">
             <span class="cerrar">&times;</span>
             <h2>Insertar Nuevo Empleado</h2>
-            <form id="formInsertarEmpleado">
+            <form id="formInsertarEmpleado" method="POST">
+                {% csrf_token %}
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <br>
+                <br>
                 <label for="salario">Salario:</label>
                 <input type="text" id="salario" name="salario" required>
+                <br>
                 <br>
                 <button type="submit">Insertar</button>
             </form>
