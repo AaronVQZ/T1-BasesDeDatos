@@ -1,10 +1,12 @@
+{% load static%}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".\static\estilos.css">
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
     <title>Tarea Programada 1</title>
 </head>
 <body>
@@ -42,6 +44,24 @@
     <div class="contenedor_botones">
         <button id="boton_agregar">Agregar Empleado</button>
     </div>
+
+    <div id="modalInsertarEmpleado" class = "modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2>Insertar Nuevo Empleado</h2>
+            <form id="formInsertarEmpleado">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label for="salario">Salario:</label>
+                <input type="text" id="salario" name="salario" required>
+                <br>
+                <button type="submit">Insertar</button>
+            </form>
+        </div>
+    </div>
     
+    
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
