@@ -24,6 +24,28 @@ document.addEventListener('DOMContentLoaded', function() {
     form.onsubmit = function(event){
         event.preventDefault();
 
+        const nombre = document.getElementById('nombre').value;
+        const salario = document.getElementById('salario').value;
+        
+        //validacion del nombre
+
+        //expresion regular
+        const nombreExpReg = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s\-]+$/;
+        if (!nombreExpReg.test(nombre)) {
+            alert("El nombre solo puede contener letras, espacios y guiones");
+            return;
+        }
+
+        //validacion del salario
+        const salarioExpReg = /^\d+(\.\d{1,2})?$/;
+        if(!salarioExpReg.test(salario)) {
+            alert("El salario debe ser un valor monetario correcto");
+            return;
+        }
+
+
+
+
         let formData = new FormData(form);
 
         fetch("insertar_empleado/" ,{
