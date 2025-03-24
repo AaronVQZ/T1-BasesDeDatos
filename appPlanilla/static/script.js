@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.mensaje){
                 modal.style.display = "none";
                 form.reset();
+                console.log("refrescando la pag")
+                location.reload();
             }
         })
         .catch(error => console.error("Error:", error))
