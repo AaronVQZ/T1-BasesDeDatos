@@ -18,7 +18,7 @@ def insertar_empleado(request):
     if request.method == "POST":
         nombre = request.POST.get("nombre")
         salario = request.POST.get("salario")
-        outCode = 0;
+        outCode = 0
 
         query = "EXEC sp_AgregarEmpleado ?, ?, ?"
 
